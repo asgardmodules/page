@@ -1,5 +1,5 @@
 <?php
-namespace App\Page;
+namespace Coxis\Page;
 
 class Bundle extends \Coxis\Core\BundleLoader {
 	public function run() {
