@@ -15,7 +15,7 @@ class Page extends \Coxis\Core\Model {
 		'menuitem' => array(
 			'as'	=>	'menuitemable',
 			'type'	=>	'hasMany',
-			'model'	=>	'menuitem',
+			'model'	=>	'Coxis\Menu\Models\Menuitem',
 		),
 	);
 	

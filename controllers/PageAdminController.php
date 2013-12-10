@@ -3,7 +3,7 @@
 @Prefix('admin/pages')
 */
 class PageAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'page';
+	static $_model = 'Coxis\Page\Models\Page';
 	static $_models = 'pages';
 
 	function __construct() {
