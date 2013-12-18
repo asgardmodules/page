@@ -1,5 +1,5 @@
 <?php
-class Page extends \Coxis\Core\Model {
+class Page extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'title',
 		'content'	=>	array(
@@ -15,13 +15,13 @@ class Page extends \Coxis\Core\Model {
 		'menuitem' => array(
 			'as'	=>	'menuitemable',
 			'type'	=>	'hasMany',
-			'model'	=>	'Coxis\Menu\Models\Menuitem',
+			'entity'	=>	'Coxis\Menu\Entities\Menuitem',
 		),
 	);
 	
 	public static $behaviors = array(	
-		'metas' => true,
-		'publish' => true,
+		'Coxis\Behaviors\MetasBehavior',
+		'Coxis\Behaviors\PublishBehavior',
 	);
 		
 	public static $meta = array(

@@ -8,7 +8,7 @@ class PageAdminTest extends PHPUnit_Framework_TestCase {
 	public function setUp(){
 		\Schema::dropAll();
 		ORMManager::autobuild();
-		\BundlesManager::loadModelFixturesAll();
+		\BundlesManager::loadEntityFixturesAll();
 	}
 	public function tearDown(){}
 

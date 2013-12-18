@@ -2,9 +2,9 @@
 /**
 @Prefix('admin/pages')
 */
-class PageAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'Coxis\Page\Models\Page';
-	static $_models = 'pages';
+class PageAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Coxis\Page\Entities\Page';
+	static $_entities = 'pages';
 
 	function __construct() {
 		$this->_messages = array(
@@ -17,8 +17,8 @@ class PageAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminControl
 		parent::__construct();
 	}
 	
-	public function formConfigure($model) {
-		$form = new \Coxis\Admin\Libs\Form\AdminModelForm($model, $this);
+	public function formConfigure($entity) {
+		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
 
 		if(_ENV_ != 'dev')
 			unset($this->form->name);

@@ -9,7 +9,7 @@ class PageController extends Controller {
 	})
 	*/
 	public function showAction($request) {
-		if(!($this->page = Page::loadByURL($request['url'])) || !$this->page->published)
+		if(!($this->page = \Coxis\Page\Entities\Page::loadByURL($request['url'])) || !$this->page->published)
 			$this->notfound();
 
 		// $this->page->replaceTags(array(
