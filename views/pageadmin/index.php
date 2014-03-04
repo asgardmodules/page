@@ -27,7 +27,7 @@
 						</div>	
 						<div class="block_content"> -->
 						
-							<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+							<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($pages) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
@@ -51,7 +51,7 @@
 												<td><?php echo $page->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$page->id)) ?>"><?php echo $page ?></a></td>
 												<td class="actions">
-													<?php \Hook::trigger('coxis_page_actions', $page) ?>
+													<?php \Hook::trigger('asgard_page_actions', $page) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$page->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>

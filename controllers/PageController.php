@@ -1,5 +1,5 @@
 <?php
-class PageController extends \Coxis\Core\Controller {
+class PageController extends \Asgard\Core\Controller {
 	/**
 	@Route(value = ':url', requirements = {
 		url = {
@@ -9,7 +9,7 @@ class PageController extends \Coxis\Core\Controller {
 	})
 	*/
 	public function showAction($request) {
-		if(!($this->page = \Coxis\Page\Entities\Page::loadByURL($request['url'])) || !$this->page->published)
+		if(!($this->page = \Asgard\Page\Entities\Page::loadByURL($request['url'])) || !$this->page->published)
 			$this->notfound();
 
 		// $this->page->replaceTags(array(

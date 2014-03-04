@@ -1,5 +1,5 @@
 <?php
-class Page extends \Coxis\Core\Entity {
+class Page extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title',
 		'content'	=>	array(
@@ -15,13 +15,13 @@ class Page extends \Coxis\Core\Entity {
 		'menuitem' => array(
 			'as'	=>	'menuitemable',
 			'type'	=>	'hasMany',
-			'entity'	=>	'Coxis\Menu\Entities\Menuitem',
+			'entity'	=>	'Asgard\Menu\Entities\Menuitem',
 		),
 	);
 	
 	public static $behaviors = array(	
-		'Coxis\Behaviors\MetasBehavior',
-		'Coxis\Behaviors\PublishBehavior',
+		'Asgard\Behaviors\MetasBehavior',
+		'Asgard\Behaviors\PublishBehavior',
 	);
 		
 	public static $meta = array(
@@ -32,7 +32,7 @@ class Page extends \Coxis\Core\Entity {
 	}
 
 	public function url() {
-		return \Coxis\Core\App::get('url')->url_for(array('page', 'show'), array('url'=>$this->url));
+		return \Asgard\Core\App::get('url')->url_for(array('page', 'show'), array('url'=>$this->url));
 	}
 
 	public function replaceTags($tags) {

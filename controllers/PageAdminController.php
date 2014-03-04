@@ -2,8 +2,8 @@
 /**
 @Prefix('admin/pages')
 */
-class PageAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Coxis\Page\Entities\Page';
+class PageAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Asgard\Page\Entities\Page';
 	static $_entities = 'pages';
 
 	function __construct() {
@@ -18,7 +18,7 @@ class PageAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminContro
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
 
 		if(_ENV_ != 'dev')
 			unset($this->form->name);

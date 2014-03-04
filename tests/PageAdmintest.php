@@ -1,8 +1,8 @@
 <?php
 if(!defined('_ENV_'))
 	define('_ENV_', 'test');
-require_once(dirname(__FILE__).'/../../../coxis.php');
-Coxis::load();
+require_once(dirname(__FILE__).'/../../../asgard.php');
+Asgard::load();
 
 class PageAdminTest extends PHPUnit_Framework_TestCase {
 	public function setUp(){

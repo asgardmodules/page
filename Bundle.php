@@ -1,10 +1,10 @@
 <?php
-namespace Coxis\Page;
+namespace Asgard\Page;
 
-class Bundle extends \Coxis\Core\BundleLoader {
+class Bundle extends \Asgard\Core\BundleLoader {
 	public function run() {
-		\Coxis\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => 'Pages', 'link' => 'pages');
-		\Coxis\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Coxis\Core\Facades\Coxis\Core\App::get('url')->to('page/icon.svg'), 'link'=>'pages', 'title' => 'Pages', 'description' => __('All the static pages.'));
+		\Asgard\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => 'Pages', 'link' => 'pages');
+		\Asgard\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Asgard\Core\Facades\Asgard\Core\App::get('url')->to('page/icon.svg'), 'link'=>'pages', 'title' => 'Pages', 'description' => __('All the static pages.'));
 		parent::run();
 	}
 }
