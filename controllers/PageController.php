@@ -1,5 +1,5 @@
 <?php
-class PageController extends Controller {
+class PageController extends \Coxis\Core\Controller {
 	/**
 	@Route(value = ':url', requirements = {
 		url = {

@@ -10,7 +10,7 @@
 					<a href="<?php echo !$page->isNew() ? $this->url_for('edit', array('id'=>$page->id)):$this->url_for('new') ?>">
 					<?php echo !$page->isNew() ? $page:__('New') ?>
 					</a></p>
-					<?php \Coxis\Core\Flash::showAll() ?>
+					<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
 					
 					<?php
 					$form->open();
@@ -19,7 +19,7 @@
 					echo $form->title->def();
 					echo $form->published->def();
 					echo $form->url->def();
-					echo $form->content->wysiwyg(array('config'=>\URL::to('page/ckeditor_config.js')));
+					echo $form->content->wysiwyg(array('config'=>\Coxis\Core\App::get('url')->to('page/ckeditor_config.js')));
 					echo $form->meta_title->def();
 					echo $form->meta_description->def();
 					echo $form->meta_keywords->def();

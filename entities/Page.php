@@ -32,7 +32,7 @@ class Page extends \Coxis\Core\Entity {
 	}
 
 	public function url() {
-		return \URL::url_for(array('page', 'show'), array('url'=>$this->url));
+		return \Coxis\Core\App::get('url')->url_for(array('page', 'show'), array('url'=>$this->url));
 	}
 
 	public function replaceTags($tags) {
