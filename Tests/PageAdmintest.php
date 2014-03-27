@@ -1,7 +1,7 @@
 <?php
 if(!defined('_ENV_'))
 	define('_ENV_', 'test');
-require_once(dirname(__FILE__).'/../../../asgard.php');
+require_once(__dir__.'/../../../asgard.php');
 Asgard::load();
 
 class PageAdminTest extends PHPUnit_Framework_TestCase {

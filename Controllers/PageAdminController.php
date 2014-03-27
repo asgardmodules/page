@@ -6,7 +6,7 @@ class PageAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminContr
 	static $_entity = 'Asgard\Page\Entities\Page';
 	static $_entities = 'pages';
 
-	function __construct() {
+	public function __construct() {
 		$this->_messages = array(
 					'modified'			=>	__('Page modified with success.'),
 					'created'			=>	__('Page created with success.'),
