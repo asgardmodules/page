@@ -7,7 +7,7 @@ Asgard::load();
 class PageAdminTest extends PHPUnit_Framework_TestCase {
 	public function setUp(){
 		\Schema::dropAll();
-		ORMManager::autobuild();
+		MigrationsManager::autobuild();
 		\BundlesManager::loadEntityFixturesAll();
 	}
 	public function tearDown(){}
