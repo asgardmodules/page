@@ -3,7 +3,7 @@
 @Prefix('admin/pages')
 */
 class PageAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Asgard\Page\Entities\Page';
+	static $_entity = 'App\Page\Entities\Page';
 	static $_entities = 'pages';
 
 	public function __construct() {

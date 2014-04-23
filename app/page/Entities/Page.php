@@ -15,13 +15,14 @@ class Page extends \Asgard\Core\Entity {
 		'menuitem' => array(
 			'as'	=>	'menuitemable',
 			'type'	=>	'hasMany',
-			'entity'	=>	'Asgard\Menu\Entities\Menuitem',
+			'entity'	=>	'App\Menu\Entities\Menuitem',
 		),
 	);
 	
 	public static $behaviors = array(	
 		'Asgard\Behaviors\MetasBehavior',
 		'Asgard\Behaviors\PublishBehavior',
+		'Asgard\Orm\ORMBehavior',
 	);
 		
 	public static $meta = array(
