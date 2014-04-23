@@ -1,5 +1,5 @@
 <?php
-class FaqMigration {
+class Page {
 	public static function up() {
 		$table = \Asgard\Core\App::get('config')->get('database/prefix').'page';
 		\Asgard\Core\App::get('schema')->create($table, function($table) {	
