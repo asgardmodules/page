@@ -7,5 +7,5 @@ require _CORE_DIR_.'core.php';
 \Asgard\Utils\FileManager::copy(__DIR__.'/tests/PageAdminTest.php', _DIR_.'tests/PageAdminTest.php');
 \Asgard\Utils\FileManager::copy(__DIR__.'/web/page', _DIR_.'web/page');
 
-\Asgard\Orm\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Page.php');
-\Asgard\Orm\MigrationsManager::migrate('Page');
+\Asgard\Orm\Libs\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Page.php');
+\Asgard\Orm\Libs\MigrationsManager::migrate('Page');
