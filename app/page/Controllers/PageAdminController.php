@@ -2,7 +2,7 @@
 /**
 @Prefix('admin/pages')
 */
-class PageAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+class PageAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
 	static $_entity = 'Asgard\Page\Entities\Page';
 	static $_entities = 'pages';
 
@@ -18,7 +18,7 @@ class PageAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminContr
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \App\Admin\Libs\Form\AdminEntityForm($entity, $this);
 
 		if(_ENV_ != 'dev')
 			unset($this->form->name);
