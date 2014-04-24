@@ -1,19 +1,21 @@
 <?php
+namespace App\Page\Controllers;
+
 /**
 @Prefix('admin/pages')
 */
 class PageAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'App\Page\Entities\Page';
-	static $_entities = 'pages';
+	protected $_entity = 'App\Page\Entities\Page';
+	protected $_entities = 'pages';
 
 	public function __construct() {
 		$this->_messages = array(
-					'modified'			=>	__('Page modified with success.'),
-					'created'			=>	__('Page created with success.'),
-					'many_deleted'			=>	__('Pages modified with success.'),
-					'deleted'			=>	__('Page deleted with success.'),
-					'unexisting'			=>	__('This page does not exist.'),
-				);
+			'modified'			=>	__('Page modified with success.'),
+			'created'			=>	__('Page created with success.'),
+			'many_deleted'			=>	__('Pages modified with success.'),
+			'deleted'			=>	__('Page deleted with success.'),
+			'unexisting'			=>	__('This page does not exist.'),
+		);
 		parent::__construct();
 	}
 	

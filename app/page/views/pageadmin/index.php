@@ -2,7 +2,7 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst(static::$_entities) ?></a></h2>
+					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_entities) ?></a></h2>
 					<ul>
 						<li><a href="<?php echo $this->url_for('new') ?>"><?php echo __('Add') ?></a></li>
 					</ul>
@@ -27,7 +27,7 @@
 						</div>	
 						<div class="block_content"> -->
 						
-							<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
+							<?php \Asgard\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($pages) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
@@ -51,7 +51,7 @@
 												<td><?php echo $page->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$page->id)) ?>"><?php echo $page ?></a></td>
 												<td class="actions">
-													<?php \Hook::trigger('asgard_page_actions', $page) ?>
+													<?php \Asgard\Core\App::get('hook')->trigger('asgard_page_actions', $page) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$page->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>

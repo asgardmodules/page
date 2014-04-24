@@ -1,4 +1,6 @@
 <?php
+namespace App\Page\Entities;
+
 class Page extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title',
@@ -12,11 +14,11 @@ class Page extends \Asgard\Core\Entity {
 	);
 
 	public static $relations = array(	
-		'menuitem' => array(
-			'as'	=>	'menuitemable',
-			'type'	=>	'hasMany',
-			'entity'	=>	'App\Menu\Entities\Menuitem',
-		),
+		// 'menuitem' => array(
+		// 	'as'	=>	'menuitemable',
+		// 	'type'	=>	'hasMany',
+		// 	'entity'	=>	'App\Menu\Entities\Menuitem',
+		// ),
 	);
 	
 	public static $behaviors = array(	
